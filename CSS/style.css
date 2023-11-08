@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto+Slab&display=swap');
+
+
+/* Regras gerais do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis utilizadas para a calculadora */
+:root {
+    --fonte-titulo: 'Roboto Slab', serif;
+    --fonte-texto: 'Roboto Mono', monospace;
+    --cor-fundo: white;
+    --cor-calculadora: #F5F5F5;
+    --cor-texto: red;
+    --cor-tabela: #DCDCDC;
+}
+
+/* estilizando o corpo da calculadora */
+body {
+    font-family: var(--fonte-titulo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+/* Editando imagem */
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+#img img {
+    width: 400px;
+}
+
+/* Estilzando a calculadora */
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #F5F5F5;
+    color: var(--cor-texto);
+    border-radius: 10%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#title {
+    font-family: var(--fonte-titulo);
+    font-size: 2.25rem;
+    position: relative;
+}
+
+#title::after {
+    position: absolute;
+    content: '';
+    background-color: var(--cor-texto);
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+}
+
+.input-box label {
+    font-size: 1.40rem;
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--cor-tabela);
+    padding: 0.3rem;
+    border-radius: 3px;
+}
+
+.input-box span,
+.input-field i {
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.5rem;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+/* Estilizando o botão */
+#calculate {
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: var(--cor-tabela);
+    color: var(--cor-texto);
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--fonte-titulo);
+}
+
+/* Estilizando o resultado */
+#result {
+    font-family: var(--fonte-texto);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid;
+    padding: 0.75rem 0;
+}
+
+#bmi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem;
+}
+
+#bmi:last-child {
+    font-size: 0.875rem;
+    color: black;
+}
+
+#description {
+    width: 15.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* REPONSIVIDADE */
+
+@media screen and (max-width: 1024px) {
+    #img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #calculator {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}

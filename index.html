@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="shortcut icon" href="IMG/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Link externo para ter acesso a icons em código HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main id="container">
+        <!-- Imagem de ilustrativa -->
+        <section id="img">
+            <img src="IMG/imgsaude.png" alt="Imagem que representa a balança entre comidas saudavéis e Fast Foods">
+        </section>
+
+        <!-- Form para calcular o IMC do usuário -->
+        <section id="calculator">
+            <form id="form">
+                <h1 id="title"> Calculadora - IMC </h1>
+                <div class="input-box">
+                    <label for="weight"> Peso em KG </label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-scale" style="color: #ff0000;"></i>
+                        <input type="float" id="weight" required>
+                        <span>KG</span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="height"> Altura em metro </label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler-vertical" style="color: #ff0000;"></i>
+                        <input type="float" id="height" required>
+                        <span>M</span>
+                    </div>
+                </div>
+                <!-- Botão para receber o resultado -->
+                <button id="calculate"> Calcular </button>
+            </form>
+
+            <!-- Resultado do peso -->
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="description">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
